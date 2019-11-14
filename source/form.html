@@ -32,7 +32,71 @@
     </header>
 
     <main class="page-form">
+      <h1 class="page-form__heading">Подбор программы</h1>
+      <section class="form-nutrition">
+        <h2 class="visually-hidden">Подбор программы питания для вашего кота</h2>
+        <form class="form-nutrition__form form" action="https://echo.htmlacademy.ru" method="post">
+          <b>Заполните анкету и мы подберем программу питания для вашего кота</b>
 
+          <fieldset class="form__cat-info cat-info">
+            <label class="cat-info__input" for="cat-info__name">Имя:*</label>
+            <input class="cat-info__label" type="text" id="cat-info__name" name="cat-info__name" placeholder="Барсик" required>
+            <label class="cat-info__input" for="cat-info__weight">Вес (кг):*</label>
+            <input class="cat-info__label" type="text" id="cat-info__weight" name="cat-info__weight" placeholder="7" required>
+            <label class="cat-info__input" for="cat-info__age">Возраст (лет):*</label>
+            <input class="cat-info__label" type="text" id="cat-info__age" name="cat-info__age" placeholder="7" required>
+          </fieldset>
+
+          <fieldset class="form__nutrition-aim nutrition-aim">
+            <input class="visually-hidden" type="radio" id="nutrition-aim__losing-weight" name="nutrition-aim" value="losing-weight" checked>
+            <label class="nutrition-aim__label" for="nutrition-aim__losing-weight">Похудение</label>
+            <input class="visually-hidden" type="radio" id="nutrition-aim__mass-gain" name="nutrition-aim" value="mass-gain">
+            <label class="nutrition-aim__label" for="nutrition-aim__mass-gain">Набор массы</label>
+            <input class="visually-hidden" type="radio" id="nutrition-aim__need-advice" name="nutrition-aim" value="need-advice">
+            <label class="nutrition-aim__label" for="nutrition-aim__need-advice">Не знаю (нужен ваш совет)</label>
+          </fieldset>
+
+          <fieldset class="form__owner-info owner-info">
+            <h3 class="owner-info__heading">Контактные данные (владельца кота)</h3>
+            <label class="owner-info__input" for="owner-info__email">e-mail:*</label>
+            <input class="owner-info__label" type="text" id="owner-info__email" name="owner-info__email" placeholder="kuklachev@gmail.com" required>
+            <label class="owner-info__input" for="owner-info__phone-number">Телефон:*</label>
+            <input class="owner-info__label" type="text" id="owner-info__phone-number" name="owner-info__phone-number" placeholder="8 (960) 900-60-90" required>
+          </fieldset>
+
+          <fieldset class="form__comment comment">
+            <h3 class="comment__heading">Комментарий</h3>
+            <label class="visually-hidden" for="comment__text"></label> <!--Нужен ли?-->
+            <textarea class="comment__text" id="comment__text" name="comment__text" placeholder="Расскажите обо всех повадках кота"></textarea>
+          </fieldset>
+
+          <fieldset class="form__additional-form additional-form">
+            <h3 class="additional-form__heading">Дополнительно</h3>
+            <input class="visually-hidden" type="checkbox" id="additional-form__sweetener" name="additional-form__sweetener" value="additional-form__sweetener" checked>
+            <label class="additional-form__label" for="additional-form__sweetener">Сахарозаменитель</label>
+            <input class="visually-hidden" type="checkbox" id="additional-form__drinking-water" name="additional-form__drinking-water" value="additional-form__drinking-water">
+            <label class="additional-form__label" for="additional-form__drinking-water">Питьевая вода</label>
+            <input class="visually-hidden" type="checkbox" id="additional-form__milk" name="additional-form__milk" value="additional-form__milk">
+            <label class="additional-form__label" for="additional-form__milk">Молоко</label>
+            <input class="visually-hidden" type="checkbox" id="additional-form__vitamins" name="additional-form__vitamins" value="additional-form__vitamins">
+            <label class="additional-form__label" for="additional-form__vitamins">Витамины</label>
+          </fieldset>
+          <button class="additional-form__button-send button" type="submit">Отправить</button>
+          <small class="additional-form__remark">* — Обязательные поля</small>
+        </form>
+      </section>
+
+      <section class="location">
+        <h2 class="location__heading visually-hidden">Где мы находимся</h2>
+        <b class="location__appeal">Приглашаем к сотрудничеству дилеров!</b>
+        <p class="location__address">ул. Большая
+          Конюшенная, д. 19/8
+          Санкт-Петербург</p>
+        <img class="location__map-image" src="https://via.placeholder.com/150x150" width="150" height="150" alt="Местонахождение магазина">
+        <iframe class="location__map-image">
+
+        </iframe>
+      </section>
     </main>
 
     <footer class="page-footer">
