@@ -1,12 +1,20 @@
 .site-list {
-  outline: 5px solid pink;
+  .list-reset ();
+  margin-left: auto;
+  margin-right: auto;
+}
 
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.site-list__item {
+  height: 67px;
+
+  display: table;
 }
 
 .site-list__item a {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 20px;
   line-height: 20px;
@@ -14,4 +22,18 @@
   text-transform: uppercase;
 
   color: @black;
+}
+
+@media (min-width: @tablet-width) {
+  .site-list__item a {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .site-list__item a {
+    font-size: 20px;
+
+    color: @white;
+  }
 }

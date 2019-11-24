@@ -6,6 +6,7 @@
 
 //Общее для всего сайта
 @import "normalize.less";
+@import "outlines.less";
 @import "blocks/page-header.less";
 @import "blocks/main-nav.less";
 @import "blocks/site-list.less";
@@ -44,6 +45,16 @@
 @import "blocks/additional-form.less";
 
 //Глобальные стили
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 a {
   text-decoration: none;
 }
