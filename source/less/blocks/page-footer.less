@@ -1,5 +1,48 @@
 .page-footer {
-  outline: 5px solid pink;
+  .wrap();
+
+  width: 320px;
 
   background-color: @gray;
+}
+
+.page-footer__logo {
+  display: table;
+  height: 94px;
+  width: 320px;
+}
+
+.page-footer__logo-text {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+} //Не работает выравнивание
+
+.page-footer__social {
+  height: 62px;
+}
+
+.page-footer__copyright {
+  display: flex;
+  justify-content: space-between;
+  height: 78px;
+  padding: 0 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer {
+    display: flex;
+    justify-content: space-between;
+    width: 768px;
+  }
+
+  .page-footer__logo {
+    width: 128px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer {
+    width: 1300px;
+  }
 }

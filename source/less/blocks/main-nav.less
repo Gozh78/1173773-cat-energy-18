@@ -1,1 +1,33 @@
-//Пусто
+.main-nav__list {
+  display: flex;
+  flex-direction: column;
+
+  width: 320px;
+  min-height: 198px;
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav__list {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 440px;
+    min-height: 111px;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav__list {
+    width: 480px;
+    min-height: 173px;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+}

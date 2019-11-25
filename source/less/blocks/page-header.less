@@ -1,3 +1,46 @@
 .page-header {
-  outline: 5px solid pink;
+  min-height: 65px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.page-header__wrapper {
+  .wrap();
+
+  width: 320px;
+  margin-bottom: 12px;
+  padding: 0 20px;
+}
+
+.page-header__logo {
+  display: block;
+  height: 53px;
+  padding-top: 12px;
+  margin-left: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header {
+    flex-direction: row;
+
+    min-height: 111px;
+    padding: 0 30px;
+  }
+
+  .page-header__logo {
+    height: 65px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header {
+    min-height: 173px;
+    padding: 0 40px;
+  }
+
+  .page-header__logo {
+    height: 65px;
+  }
 }
