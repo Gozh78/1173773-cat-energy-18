@@ -1,17 +1,70 @@
+.form {
+  margin-bottom: 30px;
+}
+
 .form__appeal-text {
+  width: 226px;
+  display: block;
+  margin-bottom: 35px;
+
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    width: 323px;
+    margin-bottom: 65px;
+
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
+.form__wrapper {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    margin-bottom: 42px;
+  }
+}
+
+.form__cat-info,
+.form__nutrition-aim,
+.form__owner-info,
+.form__comment,
+.form__additional-form {
+  .list-reset();
+
+  /*display: flex;
+  flex-direction: column;*/
+}
+
+
 .form__remark {
+  display: block;
+  text-align: center;
+  margin-top: 19px;
+
   font-size: 14px;
   line-height: 16px;
 
   color: @light-black;
+
+  @media (min-width: @tablet-width) {
+    display: inline-block;
+    vertical-align: middle;
+  }
 }
 
-.form {
-  margin-bottom: 30px;
+.form__button-send {
+  @media (min-width: @tablet-width) {
+    .btn-height(52px);
+
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 568px;
+  }
 }

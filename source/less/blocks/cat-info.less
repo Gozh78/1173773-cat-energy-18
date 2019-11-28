@@ -1,9 +1,88 @@
+.cat-info {
+  @media (min-width: @desktop-width) {
+    width: 570px;
+    margin-right: 80px;
+  }
+}
+
 .cat-info__label {
+  width: 38px;
+  display: inline-block; //Хотел сдедать на флексах, но не получается в одну строку поместить подпись с полем
+  vertical-align: middle;
+
+
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
 
   color: @light-black-1;
+
+  &:nth-of-type(2) {
+    width: 60px;
+  }
+
+  &:last-of-type {
+    width: 100px;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+
+    &:nth-of-type(2) {
+      width: 75px;
+    }
+
+    &:last-of-type {
+      width: 125px;
+    }
+  }
+}
+
+.cat-info__input {
+  .btn-height();
+
+  width: 229px;
+  margin-right: 0;
+  margin-bottom: 14px;
+
+  &:nth-of-type(2) {
+    width: 204px;
+  }
+
+  &:last-of-type {
+    width: 172px;
+    margin-bottom: 18px;
+  }
+
+  @media (min-width: @tablet-width) {
+    .btn-height(52px);
+
+    width: 567px;
+    margin-bottom: 20px;
+
+    &:nth-of-type(2) {
+      width: 536px;
+    }
+
+    &:last-of-type {
+      width: 497px;
+      margin-bottom: 68px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 506px;
+
+    &:nth-of-type(2) {
+      width: 475px;
+    }
+
+    &:last-of-type {
+      width: 436px;
+      margin-bottom: 20px;
+    }
+  }
 }
 
 .cat-info__input,

@@ -1,5 +1,10 @@
+.comment {
+  margin-bottom: 20px;
+}
+
 .comment__heading {
   margin: 0;
+  margin-bottom: 36px;
 
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 24px;
@@ -7,10 +12,27 @@
   font-weight: 400;
 
   color: @black;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 76px;
+
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 .comment__text {
   resize: none;
+
+  @media (min-width: @tablet-width) {
+    .size(631px; 174px);
+
+    margin-bottom: 38px;
+  }
+
+  @media (min-width: @desktop-width) {
+    .size(1220px; 174px);
+  }
 }
 
 .comment__text,

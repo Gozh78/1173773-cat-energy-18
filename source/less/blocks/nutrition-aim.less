@@ -1,7 +1,33 @@
+.nutrition-aim {
+  padding-top: 29px;
+  padding-left: 45px;
+  margin-bottom: 25px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 85px;
+    padding-top: 34px;
+    margin-bottom: 76px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+  }
+}
+
 .nutrition-aim__label {
+  display: block;
+  margin-bottom: 25px;
+
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
 
   color: @light-black-1;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 32px;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
 }

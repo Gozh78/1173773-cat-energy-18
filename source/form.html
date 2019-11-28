@@ -39,25 +39,25 @@
         <h2 class="form-nutrition__heading visually-hidden">Подбор программы питания для вашего кота</h2>
         <form class="form-nutrition__form form" action="https://echo.htmlacademy.ru" method="post">
           <b class="form__appeal-text">Заполните анкету и мы подберем программу питания для вашего кота</b>
+          <div class="form__wrapper">
+            <fieldset class="form__cat-info cat-info">
+              <label class="cat-info__label" for="cat-info__name">Имя:*</label>
+              <input class="cat-info__input" type="text" id="cat-info__name" name="cat-info__name" placeholder="Барсик" required>
+              <label class="cat-info__label" for="cat-info__weight">Вес (кг):*</label>
+              <input class="cat-info__input" type="text" id="cat-info__weight" name="cat-info__weight" placeholder="7" required>
+              <label class="cat-info__label" for="cat-info__age">Возраст (лет):*</label>
+              <input class="cat-info__input" type="text" id="cat-info__age" name="cat-info__age" placeholder="7" required>
+            </fieldset>
 
-          <fieldset class="form__cat-info cat-info">
-            <label class="cat-info__label" for="cat-info__name">Имя:*</label>
-            <input class="cat-info__input" type="text" id="cat-info__name" name="cat-info__name" placeholder="Барсик" required>
-            <label class="cat-info__label" for="cat-info__weight">Вес (кг):*</label>
-            <input class="cat-info__input" type="text" id="cat-info__weight" name="cat-info__weight" placeholder="7" required>
-            <label class="cat-info__label" for="cat-info__age">Возраст (лет):*</label>
-            <input class="cat-info__input" type="text" id="cat-info__age" name="cat-info__age" placeholder="7" required>
-          </fieldset>
-
-          <fieldset class="form__nutrition-aim nutrition-aim">
-            <input class="visually-hidden" type="radio" id="nutrition-aim__losing-weight" name="nutrition-aim" value="losing-weight" checked>
-            <label class="nutrition-aim__label" for="nutrition-aim__losing-weight">Похудение</label>
-            <input class="visually-hidden" type="radio" id="nutrition-aim__mass-gain" name="nutrition-aim" value="mass-gain">
-            <label class="nutrition-aim__label" for="nutrition-aim__mass-gain">Набор массы</label>
-            <input class="visually-hidden" type="radio" id="nutrition-aim__need-advice" name="nutrition-aim" value="need-advice">
-            <label class="nutrition-aim__label" for="nutrition-aim__need-advice">Не знаю (нужен ваш совет)</label>
-          </fieldset>
-
+            <fieldset class="form__nutrition-aim nutrition-aim">
+              <input class="visually-hidden" type="radio" id="nutrition-aim__losing-weight" name="nutrition-aim" value="losing-weight" checked>
+              <label class="nutrition-aim__label" for="nutrition-aim__losing-weight">Похудение</label>
+              <input class="visually-hidden" type="radio" id="nutrition-aim__mass-gain" name="nutrition-aim" value="mass-gain">
+              <label class="nutrition-aim__label" for="nutrition-aim__mass-gain">Набор массы</label>
+              <input class="visually-hidden" type="radio" id="nutrition-aim__need-advice" name="nutrition-aim" value="need-advice">
+              <label class="nutrition-aim__label" for="nutrition-aim__need-advice">Не знаю (нужен ваш совет)</label>
+            </fieldset>
+          </div>
           <fieldset class="form__owner-info owner-info">
             <h3 class="owner-info__heading">Контактные данные (владельца кота)</h3>
             <label class="owner-info__label" for="owner-info__email">e-mail:*</label>
@@ -71,7 +71,7 @@
           <fieldset class="form__comment comment">
             <h3 class="comment__heading">Комментарий</h3>
             <label class="visually-hidden" for="comment__text"></label> <!--Нужен ли?-->
-            <textarea class="comment__text" id="comment__text" name="comment__text" rows="5" cols="45" placeholder="Расскажите обо всех повадках кота"></textarea>
+            <textarea class="comment__text" id="comment__text" name="comment__text" rows="8" cols="44" placeholder="Расскажите обо всех повадках кота"></textarea>
           </fieldset>
 
           <fieldset class="form__additional-form additional-form">
@@ -92,13 +92,14 @@
 
       <section class="location">
         <h2 class="location__heading visually-hidden">Где мы находимся</h2>
-        <b class="location__appeal-text">Приглашаем к сотрудничеству дилеров!</b>
-        <p class="location__address">ул. Большая
-          Конюшенная, д. 19/8
-          Санкт-Петербург</p>
-        <img class="location__map-image" src="https://via.placeholder.com/150x150" width="150" height="150" alt="Местонахождение магазина">
-        <iframe class="location__map-image">
-
+        <div class="location__wrapper">
+          <b class="location__appeal-text">Приглашаем к сотрудничеству дилеров!</b>
+          <p class="location__address">ул. Большая
+            Конюшенная, д. 19/8
+            Санкт-Петербург</p>
+        </div>
+        <img class="location__map-image" src="img/bg-map-mobile@1x.png" width="320" height="400" alt="Местонахождение магазина">
+        <iframe class="location__map-image-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1574931086280!5m2!1sru!2sru" width="320" height="400" frameborder="0" style="border:0;" allowfullscreen="">
         </iframe>
       </section>
     </main>

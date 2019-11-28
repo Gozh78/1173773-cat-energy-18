@@ -1,20 +1,69 @@
 .owner-info__heading {
   margin: 0;
+  margin-bottom: 32px;
 
-  font-size: 16px;
-  line-height: 16px;
+  font-size: 24px;
+  line-height: 24px;
   font-weight: 400;
-  text-transform: uppercase;
 
   color: @light-black-1;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 75px;
+
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 .owner-info__label {
+  display: inline-block;
+  vertical-align: middle;
+
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
 
   color: @light-black-1;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.owner-info__input {
+  .btn-height();
+
+  margin-bottom: 14px;
+
+  width: 219px;
+
+  &:last-of-type {
+    width: 204px;
+    margin-bottom: 25px;
+  }
+
+  @media (min-width: @tablet-width) {
+    .btn-height(52px);
+
+    width: 551px;
+    margin-bottom: 20px;
+
+    &:last-of-type {
+      width: 535px;
+      margin-bottom: 62px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 486px;
+
+    &:last-of-type {
+      width: 472px;
+      margin-bottom: 62px;
+    }
+  }
 }
 
 .owner-info__input,

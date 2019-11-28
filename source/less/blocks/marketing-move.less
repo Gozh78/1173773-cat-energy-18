@@ -5,8 +5,38 @@
   font-size: 16px;
   line-height: 20px;
 
-  margin-bottom: 35px;
+  margin-top: 40px;
 
   color: @white;
   background: @green-1 url("../img/gift-photo-mobile@1x.jpg") no-repeat;
+
+  @media (min-width: @tablet-width) {
+    .size(708px; 200px);
+
+    display: flex;
+    flex-direction: row-reverse;
+
+    margin-top: 80px;
+    margin-bottom: 77px;
+  }
+
+  @media (min-width: @desktop-width) {
+    .size(245px; 289px);
+
+    margin-top: 0;
+  }
+}
+
+.marketing-move__image {
+  .wrap();
+
+  display: block;
+}
+
+.marketing-move__appeal-text {
+  @media (min-width: @tablet-width) {
+    width: 169px;
+    margin-right: 115px;
+    margin-top: 75px;
+  }
 }
