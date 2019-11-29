@@ -1,1 +1,39 @@
-//Пусто
+.slider-cat {
+  .wrap();
+
+  background-color: @gray;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-color: transparent;
+  }
+}
+
+.slider-cat__image {
+  .wrap();
+
+  display: block;
+
+  @media (min-width: @tablet-width) {
+    .size(690px; 517px);
+  }
+
+  @media (min-width: @desktop-width) {
+    //Не пойму, почему у картинки высчитывается ширина в 471 пискель
+  }
+}
+
+.slider-cat__toggles {
+  display: flex;
+  justify-content: space-around;
+}
+
+.slider-cat__before,
+.slider-cat__after {
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+}

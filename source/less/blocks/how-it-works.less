@@ -2,6 +2,18 @@
   .wrap();
 
   width: 280px;
+  margin-bottom: 26px;
+
+  @media (min-width: @tablet-width) {
+    width: 708px;
+    padding-top: 12px;
+    margin-bottom: 45px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1220px;
+    margin-bottom: 23px;
+  }
 }
 
 .how-it-works__heading {
@@ -14,81 +26,65 @@
   font-weight: 400;
 
   color: @black;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+
+    margin-bottom: 70px;
+  }
 }
 
 .how-it-works__list {
   .list-reset ();
   padding-left: 80px;
-}
 
-.how-it-works__item {
-  width: 200px;
-  margin-bottom: 26px;
-}
-
-@media (min-width: @tablet-width) {
-  .how-it-works {
-    width: 708px;
-    padding-top: 12px;
-  }
-
-  .how-it-works__heading {
-    font-size: 60px;
-
-    margin-bottom: 70px;
-  }
-
-  .how-it-works__list {
+  @media (min-width: @tablet-width) {
     display: flex;
     flex-wrap: wrap;
 
     padding: 0;
   }
 
-  .how-it-works__item {
+  @media (min-width: @desktop-width) {
+    min-height: 228px;
+  }
+}
+
+.how-it-works__item {
+  width: 200px;
+  margin-bottom: 26px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @tablet-width) {
     flex-basis: 324px;
     min-height: 228px;
     margin-right: 60px;
     margin-bottom: 89px;
+
+    &:nth-of-type(2n) {
+      margin-right: 0;
+    }
+
+    &:nth-last-of-type(-n+2) {
+      margin-bottom: 60px;
+    }
   }
 
-  .how-it-works__item:nth-of-type(2n) {
-    margin-right: 0;
-  }
-
-  .how-it-works__item:last-of-type,
-  .how-it-works__item:nth-of-type(3) {
-    margin-bottom: 59px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .how-it-works {
-    width: 1220px;
-    margin-bottom: 30px;
-  }
-
-  .how-it-works__list {
-    min-height: 228px;
-  }
-
-  .how-it-works__item {
+  @media (min-width: @desktop-width) {
     flex-basis: 245px;
     height: 228px;
     margin-right: 80px;
     margin-bottom: 0;
-  }
 
-  .how-it-works__item:nth-of-type(2) {
-    margin-right: 80px;
-  }
+    &:nth-of-type(2) {
+      margin-right: 80px;
+    }
 
-  .how-it-works__item:nth-of-type(4n) {
-    margin-right: 0;
-  }
-
-  .how-it-works__item:last-of-type,
-  .how-it-works__item:nth-of-type(3) {
-    margin-bottom: 0;
+    &:nth-of-type(4n) {
+      margin-right: 0;
+    }
   }
 }
