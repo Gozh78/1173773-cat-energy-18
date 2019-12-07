@@ -1,14 +1,29 @@
 .catalog {
   .wrap();
 
-  width: 280px;
+  width: 320px;
   margin-bottom: 35px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 62px;
+    width: 708px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 72px;
+    width: 1220px;
+  }
 }
 
 .catalog__heading {
   margin: 0;
-  margin-bottom: 30px;
-  padding-top: 12px;
+
+  .wrap();
+
+  width: 280px;
+
+  margin-bottom: 29px;
+  padding-top: 15px;
 
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 36px;
@@ -16,6 +31,20 @@
   font-weight: normal;
 
   color: @black;
+
+  @media (min-width: @tablet-width) {
+    width: 708px;
+    padding-top: 28px;
+    margin-bottom: 167px;
+
+    font-size: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1220px;
+    padding-top: 45px;
+    margin-bottom: 165px;
+  }
 }
 
 .catalog__list {
@@ -23,39 +52,45 @@
 
   display: flex;
   flex-direction: column;
+
+  width: 320px;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    width: 708px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1220px;
+  }
 }
 
 .catalog__item {
   display: flex;
   flex-wrap: wrap;
-  flex-basis: 208px;
-}
+  //flex-basis: 208px;
+  //height: 208px;
+  padding: 0 19px;
+  padding-right: 16px;
+  margin-top: -1px;
 
-@media (min-width: @tablet-width) {
-  .catalog {
-    margin-bottom: 62px;
-    width: 708px;
-  }
+  border: 1px solid #ededed;
 
-  .catalog__heading {
-    font-size: 60px;
-    padding-top: 28px;
-    margin-bottom: 170px;
-  }
-
-  .catalog__list {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
-  .catalog__item {
+  @media (min-width: @tablet-width) {
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    flex-basis: 324px;
+    justify-content: flex-end;
+    width: 324px;
+
     margin-right: 60px;
-    margin-bottom: 140px;
+    margin-bottom: 141px;
+    padding: 0;
     min-height: 431px;
+
+    border: none;
+    background-color: @gray;
 
     &:nth-of-type(2n) {
       margin-right: 0;
@@ -65,23 +100,11 @@
       margin-bottom: 0;
     }
   }
-}
 
-@media (min-width: @desktop-width) {
-  .catalog {
-    margin-bottom: 72px;
-    width: 1220px;
-  }
-
-  .catalog__heading {
-    padding-top: 15px;
-    margin-bottom: 168px;
-  }
-
-  .catalog__item {
-    flex-basis: 245px;
+  @media (min-width: @desktop-width) {
+    width: 245px;
     margin-right: 80px;
-    margin-bottom: 142px;
+    margin-bottom: 144px;
     min-height: 431px;
 
     &:nth-of-type(2n) {
