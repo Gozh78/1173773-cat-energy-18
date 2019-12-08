@@ -6,7 +6,7 @@
 
   @media (min-width: @tablet-width) {
     width: 708px;
-    padding-top: 12px;
+    padding-top: 13px;
     margin-bottom: 45px;
   }
 
@@ -18,7 +18,7 @@
 
 .how-it-works__heading {
   margin: 0;
-  margin-bottom: 28px;
+  margin-bottom: 29px;
 
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 36px;
@@ -30,13 +30,13 @@
   @media (min-width: @tablet-width) {
     font-size: 60px;
 
-    margin-bottom: 70px;
+    margin-bottom: 169px;
   }
 }
 
 .how-it-works__list {
   .list-reset ();
-  padding-left: 80px;
+  padding-left: 81px;
 
   @media (min-width: @tablet-width) {
     display: flex;
@@ -51,8 +51,34 @@
 }
 
 .how-it-works__item {
+  position: relative;
+
   width: 200px;
   margin-bottom: 26px;
+
+  &::before {
+    .size(60px, 60px);
+
+    content: "";
+
+    position: absolute;
+    top: -2px;
+    left: -80px;
+
+    background: @green url("../img/advantage-leaf@1x.png") no-repeat 50% 50%;
+  }
+
+  &:nth-of-type(2)::before {
+    background-image: url("../img/advantage-powder@1x.png");
+  }
+
+  &:nth-of-type(3)::before {
+    background-image: url("../img/advantage-dining@1x.png");
+  }
+
+  &:nth-of-type(4)::before {
+    background-image: url("../img/advantage-clock@1x.png");
+  }
 
   &:last-of-type {
     margin-bottom: 0;
@@ -63,6 +89,48 @@
     min-height: 228px;
     margin-right: 60px;
     margin-bottom: 89px;
+
+    &::before {
+      .size(80px, 80px);
+
+      top: -96px;
+      left: 0;
+    }
+
+    &::after {
+      .size(281px, 281px);
+
+      content: "1";
+
+      position: absolute;
+      z-index: -1;
+      top: -135px;
+      left: 118px;
+
+      font-family: "Oswald", "Arial", sans-serif;
+      font-size: 281px;
+      line-height: 281px;
+
+      color: @gray;
+    }
+
+    &:nth-of-type(2)::after {
+      content: "2";
+
+      left: 112px;
+    }
+
+    &:nth-of-type(3)::after {
+      content: "3";
+
+      left: 114px;
+    }
+
+    &:nth-of-type(4)::after {
+      content: "4";
+
+      left: 114px;
+    }
 
     &:nth-of-type(2n) {
       margin-right: 0;
@@ -86,5 +154,14 @@
     &:nth-of-type(4n) {
       margin-right: 0;
     }
+  }
+}
+
+.how-it-works__description {
+  @media (min-width: @tablet-width) {
+    width: 245px;
+
+    font-size: 16px;
+    line-height: 24px;
   }
 }
