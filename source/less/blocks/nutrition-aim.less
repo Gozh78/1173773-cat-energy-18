@@ -1,17 +1,28 @@
 .nutrition-aim {
-  padding-top: 29px;
-  padding-left: 45px;
-  margin-bottom: 25px;
+  padding-top: 26px;
+  padding-left: 64px;
+  margin-bottom: 28px;
+  min-height: 158px;
+
+  border: 1px solid @light-gray;
 
   @media (min-width: @tablet-width) {
-    padding-left: 85px;
+    width: 630px;
+    padding-left: 86px;
     padding-top: 34px;
-    margin-bottom: 76px;
+    margin-bottom: 75px;
+    min-height: 196px;
   }
 
   @media (min-width: @desktop-width) {
     margin-bottom: 0;
   }
+}
+
+.nutrition-aim__wrapper {
+  position: relative;
+
+  margin: 0;
 }
 
 .nutrition-aim__label {
@@ -25,9 +36,38 @@
   color: @light-black-1;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 32px;
+    margin-bottom: 33px;
 
     font-size: 20px;
     line-height: 20px;
   }
+
+  @media (min-width: @desktop-width) {
+    //margin-bottom: 0px;
+  }
+}
+
+.nutrition-aim__radio-label {
+  .size(30px, 30px);
+
+  position: absolute;
+  top: -6px;
+  left: -45px;
+
+  border: 1px solid #cecece;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 8px @white;
+
+  @media (min-width: @tablet-width) {
+    .size(40px, 40px);
+
+    top: -10px;
+    left: -59px;
+
+    box-shadow: inset 0 0 0 10px @white;
+  }
+}
+
+.nutrition-aim__wrapper input:checked ~ .nutrition-aim__radio-label {
+  background-color: @green;
 }

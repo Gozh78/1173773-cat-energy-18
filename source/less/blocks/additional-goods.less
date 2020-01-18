@@ -23,7 +23,9 @@
 
 .additional-goods__heading {
   margin: 0;
-  margin-bottom: 50px;
+  margin-bottom: 35px;
+
+  position: relative;
 
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 24px;
@@ -32,17 +34,64 @@
 
   color: @black;
 
+  &::after {
+    content: "";
+
+    width: 53px;
+    height: 3px;
+
+    position: absolute;
+    top: 14px;
+    right: -20px;
+
+    background-color: @green;
+  }
+
   @media (min-width: @tablet-width) {
     padding-left: 36px;
-    margin-bottom: 107px;
+    margin-bottom: 81px;
 
     font-size: 36px;
     line-height: 36px;
+
+    &::after {
+      width: 327px;
+
+      top: 22px;
+      right: -30px;
+    }
+
+    &::before {
+      content: "";
+
+      width: 28px;
+      height: 3px;
+
+      position: absolute;
+      top: 22px;
+      left: -30px;
+
+      background-color: @green;
+    }
   }
 
   @media (min-width: @desktop-width) {
     padding-left: 0;
-    margin-bottom: 83px;
+    margin-bottom: 81px;
+
+    &::after {
+      width: 957px;
+
+      top: 22px;
+      right: -110px;
+    }
+
+    &::before {
+      width: 70px;
+
+      top: 22px;
+      left: -110px;
+    }
   }
 }
 

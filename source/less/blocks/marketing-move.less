@@ -5,7 +5,9 @@
   font-size: 16px;
   line-height: 20px;
 
-  margin-top: 40px;
+  margin-top: 39px;
+  margin-bottom: 111px;
+  padding-top: 171px;
 
   color: @white;
   background: @green-1 url("../img/gift-photo-mobile@1x.jpg") no-repeat;
@@ -16,14 +18,21 @@
     display: flex;
     flex-direction: row-reverse;
 
-    margin-top: 80px;
-    margin-bottom: 77px;
+    margin-top: 69px;
+    margin-bottom: 273px;
+    padding-top: 56px;
+
+    background: @green-1 url("../img/gift-photo-tablet@1x.jpg") no-repeat;
   }
 
   @media (min-width: @desktop-width) {
     .size(245px; 289px);
 
-    margin-top: 0;
+    margin-top: -1px;
+    padding-top: 171px;
+    margin-bottom: 75px;
+
+    background: @green-1 url("../img/gift-photo-desktop@1x.jpg") no-repeat;
   }
 }
 
@@ -34,9 +43,51 @@
 }
 
 .marketing-move__appeal-text {
+  .wrap();
+
+  width: 166px;
+  text-align: center;
+
+  position: relative;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: -122px;
+    left: 56px;
+
+    width: 55px;
+    height: 60px;
+
+    background: url("../img/icon-gift.svg") no-repeat;
+  }
+
   @media (min-width: @tablet-width) {
     width: 169px;
-    margin-right: 115px;
-    margin-top: 75px;
+    margin-right: 116px;
+    text-align: left;
+
+    &::before {
+      top: -7px;
+      left: -332px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 186px;
+    margin-right: 30px;
+    text-align: center;
+
+    &::before {
+      top: -122px;
+      left: 67px;
+    }
+  }
+}
+
+.marketing-move__appeal-text br {
+  @media (min-width: @desktop-width) {
+    visibility: hidden;
   }
 }

@@ -1,11 +1,20 @@
 .form {
   margin-bottom: 30px;
+
+  @media (min-width: @tablet-width) {
+    width: 630px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1220px;
+  }
 }
 
 .form__appeal-text {
-  width: 226px;
+  width: 250px;
   display: block;
-  margin-bottom: 35px;
+  margin-bottom: 25px;
+  padding-left: 20px;
 
   font-size: 14px;
   line-height: 18px;
@@ -14,17 +23,29 @@
 
   @media (min-width: @tablet-width) {
     width: 323px;
-    margin-bottom: 65px;
+    margin-bottom: 66px;
+    padding-left: 0;
 
     font-size: 20px;
     line-height: 30px;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 67px;
+  }
 }
 
 .form__wrapper {
+  @media (min-width: @tablet-width) {
+    width: 630px;
+    padding-left: 1px;
+  }
+
   @media (min-width: @desktop-width) {
+    width: 1220px;
     display: flex;
-    margin-bottom: 42px;
+    justify-content: space-between;
+    margin-bottom: 69px;
   }
 }
 
@@ -43,8 +64,9 @@
 .form__remark {
   display: block;
   text-align: center;
-  margin-top: 19px;
+  margin-top: 21px;
 
+  font-family: "Arial", sans-serif;
   font-size: 14px;
   line-height: 16px;
 
@@ -53,15 +75,36 @@
   @media (min-width: @tablet-width) {
     display: inline-block;
     vertical-align: middle;
+    margin-top: -3px;
+    margin-left: 58px;
+
+    font-size: 16px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 79px;
   }
 }
 
 .form__button-send {
+  .wrap();
+
+  font-size: 16px;
+  line-height: 20px;
+
+  border: none;
+
   @media (min-width: @tablet-width) {
     .btn-height(52px);
 
     display: inline-block;
     vertical-align: middle;
+
+    width: 283px;
+    margin-left: 1px;
+    padding-left: 4px;
+
+    font-size: 20px;
   }
 
   @media (min-width: @desktop-width) {

@@ -16,6 +16,10 @@
 
     border: none;
   }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 20px;
+  }
 }
 
 .social__item {
@@ -24,22 +28,32 @@
   align-items: flex-end;
 
   &:first-of-type {
-    padding-bottom: 2px;
+    padding-bottom: 3px;
   }
 
   &:nth-of-type(2) {
-    margin-left: 40px;
+    margin-left: 37px;
     margin-right: 40px;
+    padding-bottom: 1px;
   }
 
   @media (min-width: @tablet-width) {
     &:first-of-type {
-      padding-bottom: 5px;
+      padding-bottom: 6px;
     }
 
     &:nth-of-type(2) {
       margin-left: 28px;
       margin-right: 28px;
+      padding-bottom: 2px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &:nth-of-type(2) {
+      margin-left: 28px;
+      margin-right: 28px;
+      padding-bottom: 1px;
     }
   }
 }
