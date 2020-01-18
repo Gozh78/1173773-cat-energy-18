@@ -40,16 +40,22 @@
   background-color: @gray;
 
   @media (min-width: @tablet-width) {
-    padding: 0 30px;
+    width: 768px;
+    padding: 0 71px;
+    padding-top: 3px;
     min-height: 201px;
+
+    top: -197px;
   }
 
   @media (min-width: @desktop-width) {
     .size(570px; 201px);
 
     padding: 0 76px;
+    padding-top: 4px;
+    padding-right: 89px;
     position: absolute;
-    top: 95px;
+    top: 96px;
     left: 40px;
 
     background-color: @white;
@@ -86,6 +92,7 @@
 
   @media (min-width: @tablet-width) {
     width: 155px;
+    margin-bottom: -5px;
 
     font-size: 16px;
     text-align: right;
@@ -118,6 +125,10 @@
     .size(768px, 400px);
 
     display: block;
+  }
+
+  .location__address span {
+    line-height: 60px;
   }
 }
 
