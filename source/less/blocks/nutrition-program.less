@@ -20,7 +20,15 @@
   margin-bottom: 197px;
   padding-top: 27px;
 
-  background: @green-1 url("../img/index-background-mobile@1x.jpg") no-repeat 50% 0;
+  background-color: @green-1;
+  background-image: url("../img/index-background-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+
+  @media (min-resolution: @retina-dppx) {
+    background-image: url("../img/index-background-mobile@2x.jpg");
+    background-size: 100%;
+  }
 
   @media (min-width: @tablet-width) {
     position: relative;
@@ -63,6 +71,11 @@
       width: 720px;
       height: 696px;
       background: @green-1 url("../img/index-background-desktop@1x.jpg") no-repeat;
+
+      @media (min-resolution: @retina-dppx) {
+        background-image: url("../img/index-background-desktop@2x.jpg");
+        background-size: 100%;
+      }
     }
   }
 }
@@ -132,19 +145,32 @@
   }
 }
 
-.nutrition-program__logo-image-mobile {
+.nutrition-program__logo-image {
   .wrap();
 
   display: block;
   margin-top: 28px;
   margin-bottom: 3px;
-}
 
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    bottom: -1px;
+    right: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    order: 1;
+    right: auto;
+    left: 486px;
+    top: -28px;
+  }
+}
+/*
 .nutrition-program__logo-image-tablet,
 .nutrition-program__logo-image-desktop {
   display: none;
 }
-
+*/
 .nutrition-program__find-programs {
   margin-left: auto;
   margin-right: auto;
@@ -395,7 +421,7 @@
     margin-top: auto;
   }
 }
-
+/*
 @media (min-width: @tablet-width) {
   .nutrition-program__logo-image-mobile {
     display: none;
@@ -420,3 +446,4 @@
     margin-left: -47px;
   }
 }
+*/
