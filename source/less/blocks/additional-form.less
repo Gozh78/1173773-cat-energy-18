@@ -99,16 +99,18 @@
   position: relative;
 
   @media (min-width: @tablet-width) {
-    width: 345px;
+    width: 280px;
     margin-bottom: 50px;
+    margin-right: 65px;
 
-    .additional-form__wrapper-2:nth-of-type(2n) {
-      width: 280px;
+    &:nth-of-type(2n) {
+      margin-right: 0;
     }
   }
 
   @media (min-width: @desktop-width) {
     width: 325px;
+    margin-right: 0;
 
     &:nth-of-type(3) {
       width: 290px;
