@@ -26,84 +26,68 @@
   }
 }
 
-.slider-cat__image-mobile {
+.slider-cat__image {
   .wrap();
   .size(320px, 240px);
 
   display: block;
-  margin-bottom: 17px;
+  margin-bottom: 32px;
 
   @media (min-width: @tablet-width) {
     .size(690px; 517px);
-  }
 
-  @media (min-width: @desktop-width) {
-    //
-  }
-}
-
-.slider-cat__image-tablet,
-.slider-cat__image-desktop {
-  display: none;
-}
-
-.slider-cat__toggles {
-  display: flex;
-  justify-content: space-around;
-
-  padding-left: 37px;
-  padding-right: 32px;
-
-  @media (min-width: @tablet-width) {
-    padding: 0 100px;
-
-    justify-content: space-between;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding: 0;
-    padding-left: 40px;
-  }
-}
-
-.slider-cat__before,
-.slider-cat__after {
-  font-size: 16px;
-  line-height: 20px;
-  text-transform: uppercase;
-
-  @media (min-width: @tablet-width) {
-    font-size: 20px;
-  }
-}
-
-@media (min-width: @tablet-width) {
-  .slider-cat__image-mobile {
-    display: none;
-  }
-
-  .slider-cat__image-tablet {
-    display: block;
     position: absolute;
     top: -169px;
     left: 46px;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .slider-cat__image-tablet {
-    display: none;
-  }
-
-  .slider-cat__image-desktop {
+  @media (min-width: @desktop-width) {
     .size(690px, 517px);
 
-    display: block;
     max-width: 690px;
     position: absolute;
     top: -190px;
     left: -40px;
     order: 1;
-    //margin-left: -47px;
+  }
+}
+
+.slider-cat__toggles {
+  display: flex;
+  justify-content: space-between;
+
+  padding-left: 57px;
+  padding-right: 52px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 93px;
+    margin-top: 19px;
+
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: -6px;
+    padding-left: 34px;
+    padding-right: 0;
+  }
+}
+
+.slider-cat__toggle-before,
+.slider-cat__toggle-after {
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+
+  background: none;
+  border: none;
+  outline: none;
+
+  &:active {
+    transform: scale(0.8);
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
   }
 }
