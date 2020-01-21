@@ -198,6 +198,21 @@
         </div>
         <picture>
           <source
+            type="image/webp"
+            media="(min-width: 1300px)"
+            srcset="img/bg-map-desktop@1x.webp 1x,
+            img/bg-map-desktop@2x.webp 2x">
+          <source
+            type="image/webp"
+            media="(min-width: 768px)"
+            srcset="img/bg-map-tablet@1x.webp 1x,
+            img/bg-map-tablet@2x.webp 2x">
+          <source
+            type="image/webp"
+            srcset="img/bg-map-mobile@1x.webp 1x,
+            img/bg-map-mobile@2x.webp 2x">
+
+          <source
             media="(min-width: 1300px)"
             srcset="img/bg-map-desktop@1x.png 1x,
             img/bg-map-desktop@2x.png 2x">
@@ -251,5 +266,6 @@
       </div>
     </footer>
     <script src="js/main-nav.js"></script>
+    <script src="js/picturefill.js"></script>
   </body>
 </html>
