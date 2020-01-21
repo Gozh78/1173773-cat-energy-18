@@ -76,6 +76,7 @@
   font-size: 24px;
   line-height: 24px;
   font-weight: 400;
+  user-select: none;
 
   color: @light-black-1;
   background-color: @white;
@@ -170,6 +171,7 @@
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
+  user-select: none;
 
   color: @light-black-1;
 
@@ -265,4 +267,12 @@
   @media (min-width: @desktop-width) {
     right: 19px;
   }
+}
+/*
+.owner-info__input:invalid ~ svg {
+  fill: @error-color;
+}
+*/
+.owner-info__input:focus ~ svg {
+  fill: @green;
 }

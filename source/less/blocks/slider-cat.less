@@ -56,11 +56,11 @@
   display: flex;
   justify-content: space-between;
 
-  padding-left: 57px;
-  padding-right: 52px;
+  padding-left: 63px;
+  padding-right: 58px;
 
   @media (min-width: @tablet-width) {
-    padding: 0 93px;
+    padding: 0 99px;
     margin-top: 19px;
 
     justify-content: space-between;
@@ -68,13 +68,17 @@
 
   @media (min-width: @desktop-width) {
     margin-right: -6px;
-    padding-left: 34px;
-    padding-right: 0;
+    padding-left: 40px;
+    padding-right: 6px;
   }
 }
 
 .slider-cat__toggle-before,
 .slider-cat__toggle-after {
+  padding: 0;
+  padding-top: 1px;
+  padding-bottom: 6px;
+
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
@@ -82,12 +86,22 @@
   background: none;
   border: none;
   outline: none;
-
+/*
   &:active {
     transform: scale(0.8);
-  }
+  }*/
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
+
+    border-bottom: 1px dotted #bebebe;
+
+    &:hover {
+      border-bottom-style: solid;
+    }
+
+    &:active {
+      border: none;
+    }
   }
 }

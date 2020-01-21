@@ -49,7 +49,7 @@
     position: relative;
     top: -3px;
     right: -3px;
-    z-index: -1;
+    //z-index: -10;
     width: 720px;
     min-height: 551px;
     margin-left: 0;
@@ -102,6 +102,7 @@
   line-height: 36px;
   font-weight: 400;
   text-align: center;
+  user-select: none;
 
   color: @white;
 
@@ -129,6 +130,7 @@
   text-transform: uppercase;
   font-weight: 400;
   text-align: center;
+  user-select: none;
 
   color: @white;
 
@@ -159,18 +161,16 @@
   }
 
   @media (min-width: @desktop-width) {
-    order: 1;
+    //z-index: 1;
+    //order: 1;
     right: auto;
     left: 486px;
     top: -28px;
+
+    user-select: none;
   }
 }
-/*
-.nutrition-program__logo-image-tablet,
-.nutrition-program__logo-image-desktop {
-  display: none;
-}
-*/
+
 .nutrition-program__find-programs {
   margin-left: auto;
   margin-right: auto;
@@ -192,9 +192,10 @@
 
   @media (min-width: @desktop-width) {
     position: static;
+   //left: -200px;
+   //position: absolute;
     margin: 0;
-    text-align: left;
-    padding-left: 24px;
+    //left: -10px;
   }
 }
 
@@ -249,6 +250,7 @@
   line-height: 37px;
   text-transform: uppercase;
   font-weight: 400;
+  user-select: none;
 
   color: @light-black;
 
@@ -390,6 +392,7 @@
   font-size: 16px;
   line-height: 16px;
   text-transform: uppercase;
+  user-select: none;
 
   color: @black;
 
@@ -398,12 +401,22 @@
 
     position: absolute;
     top: 7px;
-    right: -35px;
+    left: 130px;
 
     width: 24px;
     height: 11px;
 
     background: url("../img/icon-right-arrow-long.svg") no-repeat;
+  }
+
+  &:hover::after {
+    width: 33px;
+
+    background: url("../img/icon-right-arrow-verylong.svg") no-repeat;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 
   @media (min-width: @tablet-width) {

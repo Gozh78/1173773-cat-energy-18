@@ -14,8 +14,15 @@
   display: block;
 }
 
-.copyright__logo-image {
-  //  .size(27px, 34px);
-  width: 40px;
-  height: 50px;
+.copyright:hover a {
+  color: @green;
+}
+
+.copyright:hover svg {
+  fill: @green;
+}
+
+.copyright:active a,
+.copyright:active svg {
+  opacity: 0.3;
 }
