@@ -11,10 +11,20 @@
   justify-content: space-around;
   align-items: center;
 
+  user-select: none;
+
   border-bottom: 1px solid @light-gray;
 
   &:last-of-type a {
     padding-bottom: 4px;
+  }
+
+  &:hover:not(.site-list__item--active) {
+    opacity: 0.6;
+  }
+
+  &:active:not(.site-list__item--active) {
+    opacity: 0.3;
   }
 
   @media (min-width: @tablet-width) {

@@ -111,3 +111,33 @@
     width: 568px;
   }
 }
+
+.form input:required,
+.form input:invalid {
+  border-color: @error-color;
+  border-width: 2px;
+}
+
+.form input[type="text"],
+.form input[type="email"],
+.form input[type="tel"],
+.form textarea {
+  border-width: 1px;
+  border-color: rgba(205, 205, 205, 0.5);
+}
+
+.form input[type="text"]:hover,
+.form input[type="email"]:hover,
+.form input[type="tel"]:hover,
+.form textarea:hover {
+  border-color: rgba(205, 205, 205, 1);
+}
+
+.form input[type="text"]:focus,
+.form input[type="email"]:focus,
+.form input[type="tel"]:focus,
+.form textarea:focus {
+  border-width: 2px;
+  border-color: @light-black;
+  outline: none;
+}

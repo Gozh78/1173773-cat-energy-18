@@ -31,6 +31,7 @@
   font-size: 24px;
   line-height: 24px;
   font-weight: 400;
+  user-select: none;
 
   color: @black;
 
@@ -98,10 +99,16 @@
 
   position: relative;
 
+  user-select: none;
+
   @media (min-width: @tablet-width) {
     width: 280px;
     margin-bottom: 50px;
     margin-right: 65px;
+
+    &:active {
+      opacity: 0.3;
+    }
 
     &:nth-of-type(2n) {
       margin-right: 0;

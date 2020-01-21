@@ -4,7 +4,18 @@
 
   font-family: "Oswald", "Arial", sans-serif;
   text-transform: uppercase;
+  user-select: none;
+  cursor: pointer;
 
   color: @white;
   background-color: @green;
+
+  &:hover {
+    background-color: @dark-green;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+    outline: none;
+  }
 }
