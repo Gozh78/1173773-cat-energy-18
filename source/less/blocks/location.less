@@ -31,6 +31,7 @@
 
   position: absolute;
   top: -76px;
+  z-index: 2;
 
   min-height: 114px;
   padding: 0 20px;
@@ -106,7 +107,10 @@
 .location__map-image {
   .wrap();
 
+  position: absolute;
   display: block;
+  left: 0;
+  top: 0;
 
   @media (min-width: @tablet-width) {
     .size(768px, 400px);
@@ -124,5 +128,14 @@
 }
 
 .location__map-image-iframe {
-  display: none;
+  position: relative;
+  z-index: 1;
+
+  @media (min-width: @tablet-width) {
+    .size(768px, 397px);
+  }
+
+  @media (min-width: @desktop-width) {
+    .size(1300px, 397px);
+  }
 }

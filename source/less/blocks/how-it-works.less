@@ -83,6 +83,12 @@
 
   &:last-of-type {
     margin-bottom: 0;
+
+    @media (min-width: @tablet-width) {
+      .how-it-works__description {
+        white-space: pre-line;
+      }
+    }
   }
 
   @media (min-width: @tablet-width) {
