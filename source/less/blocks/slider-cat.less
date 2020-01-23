@@ -54,13 +54,15 @@
 
 .slider-cat__toggles {
   display: flex;
-  justify-content: space-between;
+  //justify-content: space-between;
+  justify-content: center;
+  width: 320px;
 
   position: relative;
 
   padding-left: 63px;
   padding-right: 58px;
-
+  /*
   &::before {
     .size(84px, 14px);
 
@@ -89,10 +91,11 @@
     background-color: @green;
     border-radius: 6px;
   }
-
+  */
   @media (min-width: @tablet-width) {
     padding: 0 99px;
     margin-top: 19px;
+    width: 768px;
 
     justify-content: space-between;
 
@@ -113,9 +116,14 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-right: -6px;
+    width: 610px;
+    margin: 0;
+    padding: 0;
     padding-left: 40px;
-    padding-right: 6px;
+    margin-top: 19px;
+    //margin-right: -6px;
+    //padding-left: 40px;
+    //padding-right: 6px;
 
     &::before {
       left: 110px;
@@ -158,19 +166,54 @@
   }
 }
 
+.slider-cat__toggle-wrapper {
+  @media (min-width: @tablet-width) {
+    width: 428px;
+    height: 6px;
+    margin-top: 9px;
+
+    display: flex;
+    justify-content: center;
+
+    background-color: #dcdcdc;
+    border-radius: 2.5px;
+    border-color: #dcdcdc;
+  }
+}
+
 .slider-cat__toggle-middle {
-  display: none;
+  .size(84px, 14px);
+
+  display: flex;
+  align-items: center;
+  padding-left: 5px;
+  margin-top: 3px;
+  margin-left: 20px;
+  margin-right: 20px;
+
+  background-color: @white;
+  border: 1px solid #cdcdcd;
+  border-radius: 6px;
 
   @media (min-width: @tablet-width) {
+    width: 34px;
+    height: 34px;
+    padding-left: 0;
+    margin: 0;
+    margin-top: -15px;
+    justify-content: center;
+    /*
     display: block;
     width: 34px;
     height: 34px;
-
+    margin-top: -10px;
+    */
+    /*
     position: absolute;
     z-index: 2;
     top: -5px;
     left: 368px;
-
+    */
     background-color: @white;
     border: 1px solid #cdcdcd;
     border-radius: 50%;
@@ -209,13 +252,20 @@
 }
 
 .slider-cat__toggle-middle-inside {
-  width: 8px;
-  height: 8px;
-
-  position: absolute;
-  left: 12px;
-  top: 12px;
+  .size(35px, 6px);
 
   background-color: @green;
-  border-radius: 50%;
+  border-radius: 6px;
+
+  @media (min-width: @tablet-width) {
+    width: 8px;
+    height: 8px;
+    /*
+    position: absolute;
+    left: 12px;
+    top: 12px;
+    */
+    background-color: @green;
+    border-radius: 50%;
+  }
 }
