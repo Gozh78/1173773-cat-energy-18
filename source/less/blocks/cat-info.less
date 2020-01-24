@@ -25,6 +25,10 @@
   justify-content: space-between;
   align-items: center;
 
+  width: 280px;
+  margin: 0;
+  margin-bottom: 14px;
+
   @media (min-width: @tablet-width) {
     margin: 0;
     margin-bottom: 20px;
@@ -122,13 +126,18 @@
 .cat-info__input,
 .cat-info__input::placeholder {
   font-size: 16px;
-  line-height: 18px;
+  line-height: 40px;
   text-transform: uppercase;
 
   color: @light-black;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
-    line-height: 20px;
+    line-height: 52px;
   }
+}
+
+.cat-info__input--error {
+  border-color: @error-color;
+  border-width: 2px;
 }

@@ -54,7 +54,10 @@
 
 .slider-cat__toggles {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  width: 320px;
+
+  position: relative;
 
   padding-left: 63px;
   padding-right: 58px;
@@ -62,14 +65,36 @@
   @media (min-width: @tablet-width) {
     padding: 0 99px;
     margin-top: 19px;
+    width: 768px;
 
     justify-content: space-between;
+
+    &::before {
+      .size(428px, 6px);
+
+      top: 9px;
+      left: 170px;
+
+      background-color: #dcdcdc;
+      border-radius: 2.5px;
+      border-color: #dcdcdc;
+    }
+
+    &::after {
+      display: none;
+    }
   }
 
   @media (min-width: @desktop-width) {
-    margin-right: -6px;
+    width: 610px;
+    margin: 0;
+    padding: 0;
     padding-left: 40px;
-    padding-right: 6px;
+    margin-top: 19px;
+
+    &::before {
+      left: 110px;
+    }
   }
 }
 
@@ -86,10 +111,11 @@
   background: none;
   border: none;
   outline: none;
-  /*
+  cursor: pointer;
+
   &:active {
     transform: scale(0.8);
-  }*/
+  }
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -101,7 +127,81 @@
     }
 
     &:active {
+      transform: none;
       border: none;
     }
+  }
+}
+
+.slider-cat__toggle-wrapper {
+  @media (min-width: @tablet-width) {
+    width: 428px;
+    height: 6px;
+    margin-top: 9px;
+
+    display: flex;
+    justify-content: center;
+
+    background-color: #dcdcdc;
+    border-radius: 2.5px;
+    border-color: #dcdcdc;
+  }
+}
+
+.slider-cat__toggle-middle {
+  .size(84px, 14px);
+
+  display: flex;
+  align-items: center;
+  padding-left: 5px;
+  margin-top: 3px;
+  margin-left: 20px;
+  margin-right: 20px;
+
+  background-color: @white;
+  border: 1px solid #cdcdcd;
+  border-radius: 6px;
+
+  @media (min-width: @tablet-width) {
+    width: 34px;
+    height: 34px;
+    padding-left: 0;
+    margin: 0;
+    margin-top: -15px;
+    justify-content: center;
+
+    background-color: @white;
+    border: 1px solid #cdcdcd;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 308px;
+    cursor: pointer;
+    outline: none;
+
+    &:hover {
+      box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25);
+    }
+
+    &:active {
+      box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.3);
+    }
+  }
+}
+
+.slider-cat__toggle-middle-inside {
+  .size(35px, 6px);
+
+  background-color: @green;
+  border-radius: 6px;
+
+  @media (min-width: @tablet-width) {
+    width: 8px;
+    height: 8px;
+
+    background-color: @green;
+    border-radius: 50%;
   }
 }
