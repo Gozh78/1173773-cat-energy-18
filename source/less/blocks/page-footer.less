@@ -6,7 +6,7 @@
   background-color: @gray;
 
   @media (min-width: @tablet-width) {
-    .size(768px, 150px);
+    width: 768px;
 
     display: flex;
     justify-content: space-between;
@@ -15,6 +15,7 @@
     padding: 0 30px;
     padding-right: 23px;
     padding-left: 29px;
+    min-height: 150px;
   }
 
   @media (min-width: @desktop-width) {
@@ -52,7 +53,7 @@
 }
 
 .page-footer__social {
-  height: 62px;
+  min-height: 62px;
   padding: 0 20px;
   padding-left: 21px;
   margin-bottom: 16px;

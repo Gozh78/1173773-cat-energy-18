@@ -122,8 +122,16 @@
 
     border-bottom: 1px dotted #bebebe;
 
-    &:hover {
+    &:hover,
+    &:focus {
       border-bottom-style: solid;
+    }
+
+    &:focus {
+      outline-color: rgb(77, 144, 254);
+      outline-offset: -2px;
+      outline-style: auto;
+      outline-width: 5px;
     }
 
     &:active {
@@ -186,7 +194,8 @@
     }
 
     &:active {
-      box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.3);
+      box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.3),
+                  inset 0 0 0 2px @green;
     }
   }
 }

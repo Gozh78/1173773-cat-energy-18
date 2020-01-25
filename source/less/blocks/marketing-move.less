@@ -1,18 +1,18 @@
 .marketing-move {
-  .size(280px; 289px);
+  width: 280px;
+  min-height: 289px;
+  margin-top: 39px;
+  margin-bottom: 111px;
+  padding-top: 171px;
 
   font-family: "Arial", sans-serif;
   font-size: 16px;
   line-height: 20px;
 
-  margin-top: 39px;
-  margin-bottom: 111px;
-  padding-top: 171px;
-
   color: @white;
   background-color: @green-1;
   background-image: url("../img/gift-photo-mobile@1x.jpg");
-  background-repeat: no-repeat;
+  background-repeat: repeat-y;
   background-position: 50% 0;
 
   @media (min-resolution: @retina-dppx) {
@@ -21,11 +21,11 @@
   }
 
   @media (min-width: @tablet-width) {
-    .size(708px; 200px);
-
     display: flex;
     flex-direction: row-reverse;
 
+    width: 708px;
+    min-height: 200px;
     margin-top: 69px;
     margin-bottom: 273px;
     padding-top: 56px;
@@ -39,8 +39,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    .size(245px; 289px);
-
+    width: 245px;
+    min-height: 289px;
     margin-top: -1px;
     padding-top: 171px;
     margin-bottom: 75px;
